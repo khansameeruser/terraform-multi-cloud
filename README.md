@@ -17,7 +17,7 @@ AWS requires authentication, AWS CLI can be used to authenticate with AWS to be 
    - Follow the official AWS CLI installation guide [here](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
 
 2. **Configure the AWS CLI**:
-   - After installing the AWS CLI, open your command prompt or terminal and run the following command to configure your credentials:
+   - After installing the AWS CLI, run this command to configure your credentials:
      ```bash
      aws configure
      ```
@@ -41,3 +41,16 @@ provider "aws" {
 }
 ```
 ## Step 3: Initializing Azure in Terraform
+### Azure Authentication for Resource Provisioning
+
+Azure requires authentication, Azure CLI can be used to authenticate with Azure to be used in terraform.
+
+1. **Install the Azure CLI**:
+   - Follow the official Azure CLI installation guide [here](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli#install).
+
+2. **Configure the AWS CLI**:
+   - After installing the Azure CLI, open run this command to configure your credentials:
+     ```bash
+     az login
+     ```
+     
