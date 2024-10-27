@@ -8,14 +8,34 @@ I am using VS Code with terraform official plugin for easy text editing, you can
 
 ![Screenshot 2024-10-26 021416](https://github.com/user-attachments/assets/99b1b25e-43c2-4064-87c8-0bdd91111e27)
 
-## Step 2: Initializing AWS, Azure, and GCP providers in Terraform
+## Step 2: Initializing AWS in Terraform
+### AWS Authentication for Resource Provisioning
 
+AWS requires authentication, AWS CLI can be used to authenticate with AWS to be used in terraform.
+
+1. **Install the AWS CLI**:
+   - Follow the official AWS CLI installation guide [here](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+
+2. **Configure the AWS CLI**:
+   - After installing the AWS CLI, open your command prompt or terminal and run the following command to configure your credentials:
+     ```bash
+     aws configure
+     ```
+   - Enter your AWS Access Key ID, AWS Secret Access Key, default region name, and output format.
+
+   Example:
+   ```plaintext
+   AWS Access Key ID [None]: YOUR_ACCESS_KEY_ID                  (Enter your AWS access key here)
+   AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY          (Enter your AWS secret key here)
+   Default region name [None]: ap-south-2
+   Default output format [None]: json
+### AWS Provider Configuration in Terraform
+
+This is the provider block which configures the specified provider (AWS)
 ```hcl
 # HCL
-# Terraform AWS Setup
+# Terraform AWS provider configuration
 
 provider "aws" {
-  region     = "ap-south-2"
-  access_key = "MYACCESSKEY" (You have to enter your access key value from your AWS account here)
-  secret_key = "MYSECRETKEY" (You have to enter your secret key value from your AWS account here)
+  region  = "ap-south-2"
 }
