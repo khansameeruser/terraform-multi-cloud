@@ -39,3 +39,5 @@ This is the provider block which configures the specified provider (AWS)
 provider "aws" {
   region  = "ap-south-2"
 }
+```
+## Step 3: Initializing Azure in Terraform
