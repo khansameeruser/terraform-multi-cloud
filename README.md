@@ -61,3 +61,17 @@ Azure requires authentication, Azure CLI can be used to authenticate with Azure 
      az login
      ```
      
+## Step 4: Initializing GCP in Terraform
+### GCP Authentication for Resource Provisioning
+
+GCP requires authentication, gcloud CLI can be used to authenticate with terraform.
+
+1. **Install the gcloud CLI**:
+   - Follow the official gcloud CLI installation guide [here](https://cloud.google.com/sdk/docs/install).
+
+2. **Configure the gcloud CLI**:
+   - After installing the Azure CLI, open run this command to configure your credentials:
+     ```bash
+     gcloud auth application-default login
+     ```
+3. 
