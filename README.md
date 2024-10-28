@@ -40,6 +40,13 @@ provider "aws" {
   region  = "ap-south-2"
 }
 ```
+### Run Terraform init
+```
+terraform init
+```
+![image](https://github.com/user-attachments/assets/43567479-287a-41ae-af50-69d13e0f238a)
+terraform init confirms our provider and authentication with AWS
+
 ## Step 3: Initializing Azure in Terraform
 ### Azure Authentication for Resource Provisioning
 
