@@ -74,4 +74,26 @@ GCP requires authentication, gcloud CLI can be used to authenticate with terrafo
      ```bash
      gcloud auth application-default login
      ```
-3. 
+3. **Login through web when prompted**
+   - The command will open web browser login page with cli gcloud authentication, use your account to log in
+     ![gcloud CLI successfull authentication](https://github.com/user-attachments/assets/88a2aef2-66b5-421a-bcb8-4a64380f3b60)
+     I have successfully authenticated
+
+### GCP Provider Configuration in Terraform
+
+This is the provider block which configures the specified provider (GCP)
+```hcl
+# HCL
+# Terraform GCP provider configuration
+
+provider "google" {
+  project     = "my-project-id"         (Enter your project ID here)
+  region      = "asia-south2"
+}
+```
+### Run Terraform init
+```
+terraform init
+```
+![image](https://github.com/user-attachments/assets/a7116ef4-9ca3-4033-8af4-c25f020a0f21)
+terraform init confirms our provider and authentication with GCP
