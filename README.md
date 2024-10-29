@@ -103,3 +103,96 @@ terraform init
 ```
 ![image](https://github.com/user-attachments/assets/a7116ef4-9ca3-4033-8af4-c25f020a0f21)
 terraform init confirms our provider and authentication with GCP
+
+## Step 5: Creating resources on Cloud Platforms
+### Creating Resources on AWS
+
+```
+# This is the provider block of AWS, which will assign resources on AWS
+
+provider "aws" {
+  region  = "ap-south-2"
+}
+
+# Creating an VM in AWS
+
+resource "aws_instance" "vmaws" {
+  ami           = "ami-0867df9d01e38f97d"     # You can choose your AMI id from AWS EC2 console
+  instance_type = "t3.micro"
+}
+
+# Creating a VPC in AWS (with 1 subnet)
+
+resource "aws_vpc" "vpcaws" {
+  cidr_block           = "10.0.0.0/16"    # This is CIDR block of VPC
+  enable_dns_support   = true
+  enable_dns_hostnames = true
+}
+
+resource "aws_subnet" "subnetaws" {
+  vpc_id                  = aws_vpc.vpcaws.id
+  cidr_block              = "10.0.1.0/24"
+  availability_zone       = "ap-south-2"
+  map_public_ip_on_launch = true
+}
+
+# Creating a S3 bucket in AWS
+
+resource "aws_s3_bucket" "s3bucketaws" {
+  bucket = "s3bucketaws"
+}
+```
+
+### Creating Resources on GCP
+
+```
+# This is the provider block of GCP, which will assign resources on GCP
+
+provider "google" {
+  project     = "compact-circlet-439814-n4"
+  region      = "asia-south2"
+  zone        = "asia-south2-a"
+}
+
+# Creating a VM in GCP
+
+resource "google_compute_instance" "vmgcp" {
+  name         = "vmgcp"
+  machine_type = "e2-micro"       # You can select your own machine type
+
+  boot_disk {
+    initialize_params {
+      image = "ubuntu-os-cloud/ubuntu-2004-lts"     # You can select your own machine image
+    }
+  }
+
+  network_interface {
+    network = "default"
+    access_config {}
+  }
+}
+
+# Creating a VPC in GCP (with 1 subnet)
+
+resource "google_compute_network" "vpcgcp" {
+  name = "terraform-network"
+  auto_create_subnetworks = false       # It will disable automatic subnet creation
+}
+
+resource "google_compute_subnetwork" "subnetgcp" {
+  name          = "terraform-subnet"
+  ip_cidr_range = "10.0.1.0/24"         # This is the IP range for subnet
+  region        = "asia-south2"
+  network       = google_compute_network.vpcgcp.id
+}
+
+# Creating a storage bucket in GCP
+
+resource "google_storage_bucket" "bucketgcp" {
+  name     = "bucketgcp"
+  location = "asia-south2"
+}
+```
+
+### Creating Resources on Azure
+
