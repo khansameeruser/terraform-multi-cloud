@@ -66,7 +66,30 @@ Azure requires authentication, Azure CLI can be used to authenticate with Azure 
      ```bash
      az login
      ```
-     
+3. **Login into your Azure Account**
+   
+   ![image](https://github.com/user-attachments/assets/f1f90f61-6bd4-4158-8c8e-096cfa266b48)
+   - A Microsoft login prompt window will open, select your azure account with a running and active subscription, and it will automatically select your subscription and tenant id
+
+### Azure Provider Configuration in Terraform
+
+This is the provider block which configures the specified provider (Azure)
+```hcl
+# HCL
+# Terraform Azure provider configuration
+
+provider "azurerm" {
+    features {}
+}
+```
+### Run Terraform init
+```
+terraform init
+```
+
+![image](https://github.com/user-attachments/assets/15b8b350-bdaf-4bf6-82bc-1e9d150b6d2b)
+terraform init confirms our provider and authentication with Azure
+
 ## Step 4: Initializing GCP in Terraform
 ### GCP Authentication for Resource Provisioning
 
@@ -101,7 +124,7 @@ provider "google" {
 ```
 terraform init
 ```
-![image](https://github.com/user-attachments/assets/a7116ef4-9ca3-4033-8af4-c25f020a0f21)
+![terraform init gcp](https://github.com/user-attachments/assets/d8dd904f-8fb3-40f1-88b7-42a3de7bbabc)
 terraform init confirms our provider and authentication with GCP
 
 ## Step 5: Creating resources on Cloud Platforms
