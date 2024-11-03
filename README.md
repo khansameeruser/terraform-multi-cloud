@@ -5,8 +5,10 @@ This project is a Terraform-powered multi-cloud infrastructure setup, enabling c
 
 Through this project, users can create and manage cloud resources, including virtual machines, virtual private clouds (VPCs), storage buckets, and database servers with basic attributes such as UserID, name, age, phone number, and emailID. Each component is defined and maintained in code, enabling reproducibility, scalability, and version control of infrastructure deployments. This project not only highlights the use of Terraform as an IaC tool but also exemplifies best practices in resource management and automation in a multi-cloud setup.
 
-# Terraform Infrastructure as Code (IaC)
-## Scope of Project
+# Architecture
+
+# Scope of Project :
+## Resources Created on AWS, Azure and GCP using Terraform Infrastructure as Code (IaC)
 ### AWS
 1. Created Ubuntu Virtual Machine (VM) in EC2
 2. Created Virtual Private Cloud (VPC) with 1 subnet
@@ -23,7 +25,7 @@ Through this project, users can create and manage cloud resources, including vir
 3. Created a storage account with Blob Container
 4. Created a CosmosDB SQL database table with attributes (UserID, name, age and phone_number)
 
-## Tech Stack
+# Tech Stack
 - **Terraform**:
   
   Primary Infrastructure as Code tool used for managing resources across AWS, Azure, and GCP.
@@ -49,8 +51,17 @@ Through this project, users can create and manage cloud resources, including vir
   
   Used VS code text editor with offical terraform plugin for easy code management
 
+# Deployment
 
-## Usage
+## [View Deployment Guide](./DEPLOYMENT.md)
+This file provides comprehensive steps for deploying the Terraform powered multi cloud architecture
+
+# Challenges Faced
+
+## [View Challenges Encountered](./CHALLENGES.md)
+This document outlines challenges encountered while configuring infrastructure using Terraform and the solutions applied to resolve each issue.
+
+# Usage
 ### Prerequisites
 - [Terraform](https://www.terraform.io/downloads.html)
 - AWS, Azure, and GCP accounts with necessary permissions
