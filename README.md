@@ -69,8 +69,8 @@ This document outlines challenges encountered while configuring infrastructure u
 
 #### 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/multi-cloud-architecture.git
-   cd multi-cloud-architecture
+   git clone https://github.com/khansameeruser/terraform-multi-cloud.git
+   cd terraform-multi-cloud
 ```
 
 #### 2. Initialize Terraform: 
@@ -89,7 +89,7 @@ terraform apply
 Check your cloud provider console to verify the created resources
 
 #### 5. Destroy Resources (if needed):
-You can clean up this setup byu running:
+You can clean up this setup by running:
 ```
 terraform destroy
 ```
