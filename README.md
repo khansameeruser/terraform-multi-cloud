@@ -3,7 +3,7 @@
 
 This project is a Terraform-powered multi-cloud infrastructure setup, enabling consistent, automated deployments across three major cloud providers: AWS, Azure, and GCP. The project aims to demonstrate the flexibility of multi-cloud architecture and the ease of using Infrastructure as Code (IaC) to manage resources on multiple platforms from a single Terraform configuration. The infrastructure setup includes four core tasks on each provider, making it a versatile and portable solution for anyone looking to leverage the advantages of a multi-cloud environment.
 
-Through this project, users can create and manage cloud resources, including virtual machines, virtual private clouds (VPCs), storage buckets, and database servers with basic attributes such as UserID, name, age, phone number, and emailID. Each component is defined and maintained in code, enabling reproducibility, scalability, and version control of infrastructure deployments. This project not only highlights the use of Terraform as an IaC tool but also exemplifies best practices in resource management and automation in a multi-cloud setup.
+Through this project, users can create and manage cloud resources, including virtual machines, virtual private clouds (VPCs), storage buckets, and database servers with basic attributes such as UserID, name, age, phone number, and emailID. Each component is defined and maintained in code, enabling reproducibility, scalability, and version control of infrastructure deployments.
 
 # Architecture
 ![terraform architecture](https://github.com/user-attachments/assets/eb3117b9-df1a-41b1-b3a8-6b0401543a12)
