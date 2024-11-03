@@ -42,13 +42,13 @@ Reference error, it gave me a reference error which stated that my given referen
 
 **Solution:** 
 
-![ggggg](https://github.com/user-attachments/assets/6c3ee6c3-4b6a-4290-a8b0-534d4eac255b)
-Code worked perfectly, sometimes these error occur due to bad referencing or overlooking of the code personal referencing naming criteria
+![6](https://github.com/user-attachments/assets/dfc242ac-4e38-4603-966b-48e6a3682c6d)
+I corrected my reference from the default name “main” to the name I had given which was “vpcaws” in the code
 
 **Result:**  
 
 ![yhtyfdftg](https://github.com/user-attachments/assets/7965bdc6-961c-49f7-a14a-dcf7498bfcbd)
-The code executed successfully. Reference errors like these are often due to mismatches in naming conventions or overlooked tags in the code.
+Code worked perfectly, sometimes these error occur due to bad referencing or overlooking of the code personal referencing naming criteria
 
 ---
 
