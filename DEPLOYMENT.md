@@ -1,6 +1,6 @@
 # This is a Step by Step Deployment Guide
 
-This file provides comprehensive steps for deploying the serverless web application on AWS. It ensures that users can successfully deploy the application in their AWS environment.
+This file provides comprehensive steps for deploying the Terraform powered multi cloud architecture
 
 ## Step 1: Setting up Terraform
 
