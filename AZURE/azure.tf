@@ -144,3 +144,4 @@ resource "azurerm_cosmosdb_sql_container" "sqlaz" {
     paths = ["/UserID"]    # Unique key to identify the data uniquely
   }
 }
+
