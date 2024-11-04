@@ -93,3 +93,6 @@ You can clean up this setup by running:
 ```
 terraform destroy
 ```
+# Proof of Resources Deployed
+## [View Proof of Resources](./PROOF_OF_RESOURCES.md)
+This file provides screenshots of resources deployed on each cloud platform AWZ, GCP and Azure using Terraform
